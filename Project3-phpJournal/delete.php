@@ -18,4 +18,6 @@ foreach(get_journal_entries() as $item) {
 
 }
 
- include ("inc/footer.php"); ?>
+ include ("inc/footer.php");
+
+ ?>

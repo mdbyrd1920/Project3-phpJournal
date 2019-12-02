@@ -40,4 +40,5 @@ if(isset($_POST['delete'])){
             </div>
 
         </section>
+        
   <?php include ("inc/footer.php");?>
