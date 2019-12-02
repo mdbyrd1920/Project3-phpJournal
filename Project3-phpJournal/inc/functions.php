@@ -7,7 +7,7 @@ try{
  return $db->query('SELECT * FROM entries ORDER BY date DESC');
   } catch (Exception $e) {
   echo "Unable to retrieve results" . $e->getMessage() . "</br>";
-    return array();
+    return $results->fetch();
   }
 }
 
@@ -37,7 +37,7 @@ function add_entry($title, $date, $time_spent, $learned, $resources, $id = null)
           VALUES(?, ?, ?, ?, ?, ?)';
 
           if ($id){
-            $sql = 'UPDATE entries SET title=?, date =?, time_spent=?,learned=?,resources=? WHERE id = ?';
+          $sql = 'UPDATE entries SET title=?, date =?, time_spent=?,learned=?,resources=? WHERE id = ?';
           }else{
           $sql = 'INSERT INTO entries(title, date, time_spent, learned, resources) VALUES(?,?,?,?,?)';
           }
